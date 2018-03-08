@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="/../static/js/jquery-3.1.1.min.js" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--5 инпута 4 для отправки сайта, 1 для отправки поиска и 2 кнопки для отправки-->
+<table border="1">
+    <tr>
+        <th>Напишите сайт</th>
+        <th>Напишите div класса для где находядится 1 новость</th>
+        <th>Напишите div класса для где находится название</th>
+        <th>Напишите div класса для где находится подстрока</th>
+    </tr>
+    <tr>
+        <th><input id="site" value="https://stopgame.ru/"/></th>
+        <th><input id="beginer_post" value="lent-block lent-main"/></th>
+        <th><input id="beginer_name" value="title lent-title"/></th>
+        <th><input id="beginer_substring" value="brief"/></th>
+    </tr>
+</table>
+<button onclick="savePost()">Сохранить</button>
+
+<br/>
+Напишите текст который искать в подстроке
+<input id="find"/>
+<button onclick="findGet()">Искать</button>
+<section th:each="box : ${list_news}" >
+    <td th:text="${box.namePost}">Название поста</td>
+    <td th:text="${box.substringPost}">Подстрока поста</td>
+    <br/>
+</section>
+</body>
+<script type="text/javascript">
+    function savePost() {
+        //Добавить бы проверку, чтобы эти файлы были не пустыми!!, Но нельзя И такой знак тут поставить(Даже в комментах), нужно создавать другой файл js
+            $.post({
+                url:"/save",
+                data: JSON.stringify({
+                    site: $("#site").val(),
+                    beginer_post: $("#beginer_post").val(),
+                    beginer_name: $("#beginer_name").val(),
+                    beginer_substring: $("#beginer_substring").val()
+                }),
+                success:function (html) {
+                    $('html').html(html);
+                },
+                contentType: "application/json; charset=utf-8"
+            });
+
+    }
+    function findGet() {
+        if ($("#find").val().length>=1)//Сюда бы ещё сделать проверку на наличие find
+            $.get( "/find/"+$("#find").val(),function(html){$('html').html(html);});
+        else
+            alert("Текст введен некорректно")
+    }
+</script>
+</html>
