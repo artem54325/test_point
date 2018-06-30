@@ -10,7 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="640b2fd8-a87d-48a7-b8a2-16b7ed5f8807" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -935,7 +934,7 @@
       <workItem from="1521602682707" duration="1191000" />
       <workItem from="1521643936687" duration="3722000" />
       <workItem from="1521656598602" duration="2340000" />
-      <workItem from="1530330643744" duration="937000" />
+      <workItem from="1530330643744" duration="964000" />
     </task>
     <task id="LOCAL-00001" summary="Изменил метод поиска по Contains">
       <created>1520861454803</created>
@@ -951,11 +950,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530331237286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Исправил свои комментарии">
+      <created>1530331589126</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530331589126</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="591695000" />
+    <option name="totallyTimeSpent" value="591722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
