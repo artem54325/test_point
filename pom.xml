@@ -8,7 +8,7 @@
     <name>Spring Boot Web Spring Security</name>
     <description>Spring Boot Web Spring Security Example</description>
     <url>https://www.mkyong.com</url>
-    <version>1.0</version>
+    <version>1.0.0</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,6 +21,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
